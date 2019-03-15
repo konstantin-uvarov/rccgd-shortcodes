@@ -126,5 +126,5 @@ function rccgd_shortcodes_func( $atts ) {
 	}
 }
 add_shortcode( 'rccgd-shortcodes', 'rccgd_shortcodes_func' );
-//I have added some comment here just for fun
+
 ?>
