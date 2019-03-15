@@ -7,7 +7,7 @@
  * Author: Konstantin Uvarov
  * Author URI: https://rccgraphicdesigns.com/
  */
- 
+
 /** Make sure we don't expose any info if called directly */
 if ( ! defined( 'ABSPATH' ) ) exit;
 
@@ -39,7 +39,7 @@ function rccgd_shortcodes_options() {
 <form method="post" action="options.php">
     <?php settings_fields( 'rccgd-shortcodes-options-group' ); ?>
     <?php do_settings_sections( 'rccgd-shortcodes-options-group' ); ?>
-	
+
 <div id="poststuff">
 	<div id="post-body" class="metabox-holder columns-2">
 		<div id="post-body-content">
@@ -48,7 +48,7 @@ function rccgd_shortcodes_options() {
 				<th scope="row">Name</th>
 				<td><input type="text" name="rccgd_name" value="<?php echo esc_attr( get_option('rccgd_name') ); ?>"/></td>
 				</tr>
-				 
+
 				<tr valign="top">
 				<th scope="row">Type</th>
 				<td>
@@ -59,7 +59,7 @@ function rccgd_shortcodes_options() {
 					</select>
 				</td>
 				</tr>
-				
+
 				<tr valign="top">
 				<th scope="row">Details</th>
 				<td>
@@ -115,7 +115,7 @@ function rccgd_shortcodes_func( $atts ) {
 	$a = shortcode_atts( array(
 		'option' => '',
 	), $atts );
-	
+
 	switch ($a['option']) {
 		case "name":
 			return get_option('rccgd_name');
@@ -126,4 +126,5 @@ function rccgd_shortcodes_func( $atts ) {
 	}
 }
 add_shortcode( 'rccgd-shortcodes', 'rccgd_shortcodes_func' );
+//I have added some comment here just for fun
 ?>
